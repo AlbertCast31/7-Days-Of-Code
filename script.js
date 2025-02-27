@@ -1,4 +1,6 @@
 function iniciarPreguntas(){
+
+    document.getElementById("btnReiniciar").style.display="none"; // oculta el boton de reiniciar
     
     alert("Responde las siguientes preguntas:");  // Muestra un cuadro de alerta con un mensaje al usuario
 
@@ -30,15 +32,21 @@ function iniciarPreguntas(){
             document.getElementById("resultado").innerHTML += 
             `<p>Respuesta no válida. Inténtalo nuevamente.</p>`;
         }
+
+        document.getElementById("btnReiniciar").style.display="inline-block";// muestra el boton de reinicio
+
     
     } else { // Si el usuario no ingresó todos los datos requeridos
         document.getElementById("resultado").innerHTML = `<p>No ingresaste todas las respuestas. Vuelve a intentarlo.</p>`;
+        document.getElementById("btnReiniciar").style.display="inline-block"; //muestra el boton
     }
 }
 
 // Esta función limpia el contenido del elemento con id "resultado", reiniciando la encuesta
 function reiniciarEncuesta(){
     document.getElementById("resultado").innerHTML ="";
+    document.getElementById("btnReiniciar").style.display="none";// oculta el boton de reinicio
+    setTimeout(iniciarPreguntas, 100);// creamos un retraso antes de llamar a hacer las preguntas
 }
 
 // Esta función devuelve la URL de la documentación oficial del lenguaje ingresado por el usuario
