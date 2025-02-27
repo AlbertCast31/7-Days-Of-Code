@@ -55,6 +55,17 @@ button {
     transition:0.3s;
 }
 
+/* damos estilos especificos al boton de reiniciar*/
+ #btnReiniciar{
+   position: absolute;
+   bottom: 1rem;
+   right: 1rem;
+   max-width: fit-content;
+   padding: 0.8rem 1.2rem;
+
+ }
+
+
 button:hover {
     background:var(--color-boton-hover);
     color:var(--color-texto-hover);
@@ -69,4 +80,5 @@ button:hover {
     color:var(--color-texto);
     padding:1rem;
     border-radius:0.5rem;
+    
 }
