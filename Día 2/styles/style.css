@@ -1,0 +1,72 @@
+/* Definimos las variables globales para mayor optimización y escalabilidad del código */
+
+:root {
+    --color-texto:#213555;
+    --color-fondo-contenedor:#F5EFE7;
+    --color-boton:#3E5879;
+    --color-boton-hover:#D8C4B6;
+    --color-texto-hover:#213555;
+    --color-respuesta:#D8C4B6;
+}
+
+
+/* estilos generales */
+body {
+    font-family:'Arial', sans-serif;
+    text-align:center;
+    background:url('question.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color:var(--color-texto);
+    margin:0;
+    padding: 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height: 100vh;
+}
+/* Contenedor principal */
+.container {
+    background:var(--color-fondo-contenedor);
+    padding: 2rem;
+    border-radius:1rem;
+    box-shadow:0 0.3rem 1rem rgba(0, 0, 0, 0.3); /*aplicamos un sombreado al container*/
+    max-width: 31rem;
+    width:90%;
+    text-align:center;
+}
+
+
+/* Títulos y texto */
+.container h1,.container p {
+    color:var(--color-texto);
+}
+
+
+/* damos estilos a los botones (comenzar y reiniciar) */
+button {
+    background:var(--color-boton);
+    color: white;
+    border:none;
+    padding:1rem 1rem;
+    margin-top:1rem;
+    font-size: 1rem;
+    cursor:pointer;
+    border-radius:0.5rem;
+    transition:0.3s;
+}
+
+button:hover {
+    background:var(--color-boton-hover);
+    color:var(--color-texto-hover);
+}
+
+
+/* damos estilos para el mensaje de respuesta */
+#resultado {
+    margin-top:1rem;
+    font-size: 1rem;
+    background:var(--color-respuesta);
+    color:var(--color-texto);
+    padding:1rem;
+    border-radius:0.5rem;
+}
