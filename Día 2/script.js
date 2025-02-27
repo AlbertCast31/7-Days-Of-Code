@@ -56,3 +56,5 @@ function obtenerUrlDocumentacion(lenguaje){
     // Retorna la URL de la documentación si el lenguaje existe en el objeto "docs", de lo contrario, hace una búsqueda en Google
     return docs[lenguaje] || "https://www.google.com/search?q=" + encodeURIComponent(lenguaje +" documentation");
 }
+
+//se consultó mucha documentación para lograr algunas funciones
